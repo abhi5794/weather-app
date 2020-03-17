@@ -10,6 +10,7 @@ const viewPath = path.join(__dirname,'../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 app.set('view engine', 'hbs') // to be added for hbs
 app.set('views', viewPath) //for hbs views folder, since it is not in the default views folder
@@ -65,6 +66,8 @@ app.get('/weather', (req,res)=>{
 app.get('*', (req,res)=>{
     res.send('404')
 })
-app.listen(3000, ()=>{
-    console.log('Running on 3000')
+
+
+app.listen(port, ()=>{
+    console.log('Running on '+port)
 })
