@@ -17,7 +17,7 @@ weatherForm.addEventListener('submit', (e)=>{
             } 
             else{
                 messageOne.textContent = data.forecast 
-                messageTwo.textContent = data.address
+                messageTwo.textContent = 'The location you entered is : '+ data.address
             }
         })
     })

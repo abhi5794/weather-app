@@ -1,7 +1,7 @@
 const request = require('request')
 
 const forecast = (lat,long,callback)=>{
-    const url = 'https://api.darksky.net/forecast/bf31933b5241d229fc7db502452220b8/'+lat+','+long
+    const url = 'https://api.darksky.net/forecast/bf31933b5241d229fc7db502452220b8/'+lat+','+long+'?units=si'
     request({url, json : true}, (error,{body})=>{
         if(error){
             callback('No internet')
