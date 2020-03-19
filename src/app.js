@@ -64,7 +64,7 @@ app.get('/weather', (req,res)=>{
 })
 
 app.get('*', (req,res)=>{
-    res.send('404')
+    res.send('404') //
 })
 
 
